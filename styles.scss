@@ -36,48 +36,6 @@ body {
             /* font-weight: 200; */
         }
 
-        .listed-skills {
-            margin-top: 3rem;
-            font-size: 3rem;
-            font-weight: 400;
-        }
-
-        .print-messages > li{
-            margin-top: 1rem;
-            font-size: 2rem;
-            color: blue;
-        }
-
-        .social, 
-        .clear {
-            /* position: absolute; */
-            background-color:greenyellow;
-            padding: 1.5rem 4rem;
-            display: inline-block;
-            margin-top: 2rem;
-            bottom: 0;
-            border-radius: 5000px;
-            font-size: 2.1rem;
-            outline: none;
-            border: none;
-
-        }
-
-
-        .clear {
-            background-color:white;
-            color: grey;
-            /* font-size: 1.8rem; */
-            /* font-size: 3rem; */
-            border: none;
-            padding: 1rem;
-        }
-        
-        .social:hover, 
-        .clear:hover {
-            cursor: pointer;
-        }
-
     }
 
     .message {
@@ -96,5 +54,20 @@ body {
         background-image: url(guy_teaching.jpg);
         background-size: cover;
         opacity: 75%;
+        display: flex;
+
+        .tran1 {
+            width: 20%;
+            opacity: 0.5;
+            background-color: white;
+            //border: 1px solid black;
+
+        }
+
+        .tran2 {
+            width: 15%;
+            opacity: 0.3;
+            background-color: white;
+        }
     }
 }
