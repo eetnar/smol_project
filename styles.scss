@@ -13,15 +13,22 @@ body {
     font-size: 1rem;
 }
 
+
 .container {
+	background-color: #EEE;
     display: flex;
     margin: 0 auto;
     height: 100vh;
+    justify-content: center;
+
 
     .words {
+	    background-color: white;
         min-height: 50%;
-        width: 40%;
-        margin: 5rem;
+	padding: 5rem;
+	max-width: 900px;
+	min-width: 376px;
+	flex-shrink: 1;
 
         .name {
             margin-bottom: 2rem;
@@ -38,36 +45,113 @@ body {
 
     }
 
-    .message {
-        font-size: 3.1rem;
-        /* font-weight: 400; */
-        width: 100%;
-        padding: 12px 20px;
-        margin-top: 5rem;
-        border-radius: .75rem;
-        outline: none;
-        font-family: 'Roboto', sans-serif;
+
+    .what {
+	    background-color: white;
+	width: 70%;
+	flex-shrink: 0.3;
+	max-width: calc(1230px - 200px);
+	max-height: 100vh;
+	overflow: hidden;
+	
+	.photograph {
+
+		background-image: url(guy_teaching.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: right -500px top 0;
+		opacity: 75%;
+		display: flex;
+		min-height: 1000px;
+
+		.tran1 {
+		    width: 20%;
+		    opacity: 0.5;
+		    background-color: white;
+		    //border: 1px solid black;
+
+		}
+
+		.tran2 {
+		    width: 15%;
+		    opacity: 0.3;
+		    background-color: white;
+		}
+
+		.tran3 {
+			width: 10%;
+			opacity: 0.1;
+			background-color: white;
+		}
+
+		.tranmobile {
+			display: none;
+		}
+
+		.tran1,
+		.tran2,
+		.tran3 {
+			transition: width 1s ease-in-out;
+		}
+
+		@media (max-width: 1100px) {
+			
+			.tran1,
+			.tran2,
+			.tran3 {
+				transition: width 1s ease-in-out;
+				width: 0%;
+				
+			}
+		}
+	}
     }
+}
 
-    .photograph {
-        width: 70%;
-        background-image: url(guy_teaching.jpg);
-        background-size: cover;
-        opacity: 75%;
-        display: flex;
+@media (max-width: 800px) {
+	.container {
+		flex-direction: column !important;
+		height: 100% !important;
 
-        .tran1 {
-            width: 20%;
-            opacity: 0.5;
-            background-color: white;
-            //border: 1px solid black;
+		.words {
+		}
 
-        }
 
-        .tran2 {
-            width: 15%;
-            opacity: 0.3;
-            background-color: white;
-        }
-    }
+		.what {
+			width: 100% !important;
+			max-height: 500px !important;
+
+			.photograph {
+				background-position: right -575px top 0 !important; 
+
+				.tranmobile {
+					display: block !important;
+					opacity: 0.6;
+					background-color: white;
+					width: 57% !important;
+					padding: 5rem;
+					h3 {
+
+						margin-bottom: 1.5rem;
+						font-weight: 600 !important;
+						font-size: 2.5rem !important;
+
+						& + p {
+
+							margin-bottom: 3rem !important;
+						}
+					}
+					p {
+						font-size: 2.25rem !important;
+						font-weight: 400 !important;
+						/* font-weight: 200; */
+						margin-bottom: 1.5rem;
+					}
+				}
+
+			}
+
+
+		}
+	}
 }
